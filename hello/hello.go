@@ -16,5 +16,12 @@ func main() {
 		log.Fatal(err) // this call also exits the program
 	}
 
-	fmt.Println(">>>>>>>", message)
+	fmt.Println(">>>>>>> ", message)
+
+	messages, err := greetings.Hellos([]string{"Tooooy", "Nuuuuuut", "Eeeeeeg"})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("------ ", messages)
 }
